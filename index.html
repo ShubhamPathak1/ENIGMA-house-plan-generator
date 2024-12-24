@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enigma - Generate House Plan </title>   <!-- Replace "generate house plan" with Subtitle(slogan) -->
+    <title>Enigma - Generate House Plan </title> <!-- Replace "generate house plan" with Subtitle(slogan) -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="title">
         <div class="logoTitle-contain">
-            <img src="logo.png" alt="" class="logo">   <!-- Replace logo.png with original logo -->
+            <img src="logo.png" alt="" class="logo"> <!-- Replace logo.png with original logo -->
             <h1>Enigma</h1>
         </div>
-        <h3>Generate House Plan</h3>   <!-- Replace it with Subtitle(slogan) -->
+        <h3>Generate House Plan</h3> <!-- Replace it with Subtitle(slogan) -->
     </div>
     <div class="formContain">
         <form action="" method="get">
             <div class="form-group">
                 <label for="length">Enter the Length of Land (ft): </label>
-                <input type="text" name="length" id="length" required placeholder="eg; 100">
+                <input type="number" name="length" id="length" required placeholder="eg; 100">
             </div>
             <div class="form-group">
                 <label for="width">Enter the Width of Land (ft): </label>
-                <input type="text" name="width" id="width" required placeholder="eg; 50">
+                <input type="number" name="width" id="width" required placeholder="eg; 50">
             </div>
             <div class="form-group">
                 <label for="budget">What's your Budget? </label>
@@ -32,12 +34,21 @@
                 <label for="noRooms">Enter the Number of Rooms: </label>
                 <input type="number" name="noRooms" id="noRooms" required placeholder="eg; 4">
             </div>
-            <input type="button" value="Generate Plan">
+            <div class="form-group">
+                <label for="material">Select Material to be Used: </label>
+                <select name="material" id="material" required>
+                    <option value="brick">Brick</option>
+                    <option value="wood">Wood</option>
+                    <option value="concrete">Concrete</option>
+                </select>
+            </div>
+            <input type="button" class="generateBtn" value="Generate Plan">
 
         </form>
     </div>
-    
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
